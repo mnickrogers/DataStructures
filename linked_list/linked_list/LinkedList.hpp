@@ -16,10 +16,13 @@ class LinkedList {
 
 public:
     
-    LinkedList();
+    LinkedList(Node * head);
     ~LinkedList();
     
     void printList();
+    void pushNode(Node * node);
+    
+    int length() const;
     
 private:
     

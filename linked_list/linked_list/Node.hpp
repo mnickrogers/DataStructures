@@ -20,9 +20,11 @@ public:
     
     ~Node();
     
-    Node * getNextNode();
+    Node * getNextNode() const;
     
-    NodeData * getData();
+    NodeData * getData() const;
+    
+    const void addNextNode(Node * next);
     
 private:
     

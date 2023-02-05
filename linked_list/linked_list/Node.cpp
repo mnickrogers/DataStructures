@@ -16,10 +16,14 @@ Node::~Node() {
     delete this->data;
 }
 
-Node * Node::getNextNode() {
+Node * Node::getNextNode() const {
     return this->next;
 }
 
-NodeData * Node::getData() {
+NodeData * Node::getData() const {
     return this->data;
+}
+
+const void Node::addNextNode(Node *next) {
+    this->next = next;
 }
