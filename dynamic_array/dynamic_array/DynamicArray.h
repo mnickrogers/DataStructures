@@ -50,12 +50,23 @@ public:
         size++;
     }
     
-    T pop() {
+    T popBack() {
         T item = array[size];
         
         size--;
         
         return item;
+    }
+    
+    T popFront() {
+        T element = array[0];
+        
+        for (int i = 1; i < size; i++)
+            array[i-1] = array[i];
+        
+        size--;
+        
+        return element;
     }
     
     T & operator[] (const int index);
@@ -93,7 +104,7 @@ template <class T>
 std::ostream & operator << (std::ostream & os, DynamicArray<T> *array) {
     
     for (int i = 0; i < array->getLength(); i++) {
-        T element = array->pop();
+        T element = array->popFront();
         os << element << std::endl;
     }
     

@@ -13,11 +13,10 @@ int main(int argc, const char * argv[]) {
     DynamicArray<int> *dArray = new DynamicArray<int>();
     
     dArray->push(0);
-    std::cout << dArray->getValueAtIndex(0) << std::endl;
     dArray->push(1);
-    std::cout << dArray->getValueAtIndex(1) << std::endl;
     dArray->push(2);
-    std::cout << dArray->getValueAtIndex(2) << std::endl;
+    
+    std::cout << dArray << std::endl;
     
     delete dArray;
     
