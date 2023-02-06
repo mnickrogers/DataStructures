@@ -69,7 +69,7 @@ public:
         return element;
     }
     
-    T & operator[] (const int index);
+    T & operator[] (const size_t index);
     
 protected:
     
@@ -96,7 +96,7 @@ private:
 };
 
 template <class T>
-inline T& DynamicArray<T>::operator[] (const int index) {
+T & DynamicArray<T>::operator[] (const size_t index) {
     return array[index];
 }
 
@@ -105,7 +105,7 @@ std::ostream & operator << (std::ostream & os, DynamicArray<T> *array) {
     
     for (int i = 0; i < array->getLength(); i++) {
         T element = array->popFront();
-        os << element << std::endl;
+        os << element << " ";
     }
     
     return os;
