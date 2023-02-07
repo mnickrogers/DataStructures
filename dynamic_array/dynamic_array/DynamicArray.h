@@ -69,7 +69,8 @@ public:
         return element;
     }
     
-    T & operator[] (const size_t index);
+    T & operator[] (size_t index);
+    T & operator[] (size_t index) const;
     
 protected:
     
@@ -96,7 +97,12 @@ private:
 };
 
 template <class T>
-T & DynamicArray<T>::operator[] (const size_t index) {
+T& DynamicArray<T>::operator[] (size_t index) {
+    return array[index];
+}
+
+template <class T>
+T& DynamicArray<T>::operator[] (size_t index) const {
     return array[index];
 }
 

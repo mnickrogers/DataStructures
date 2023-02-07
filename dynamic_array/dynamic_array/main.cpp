@@ -16,6 +16,8 @@ int main(int argc, const char * argv[]) {
     dArray->push(1);
     dArray->push(2);
     
+    int i = (*dArray)[0];
+    
     std::cout << dArray << std::endl;
     
     delete dArray;
